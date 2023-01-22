@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PassGuard</title>
+    <i class="fa-solid fa-shield-keyhole"></i>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">PassGuard</a>
+    </header>
+    
+    <div class="landing">
+      <section>
+        <img src="assets/stars.png" id="stars">
+        <img src="assets/moon.png" id="moon">
+        <img src="assets/mountains_behind.png" id="mountains_background">
+        
+        <h2 id="text">Test your password</h2>
+
+        <!-- Text field -->
+
+        <!-- When button is clicked, need to call python functions to test pw -->
+        <a href="#test-result" id="btn">Crack my password</a>
+
+        <img src="assets/mountains_front.png" id="mountains_front">
+      </section>
+    </div>
+    <div class="test-result" id="test-result">
+      <h2>Password Analysis Result</h2>
+      <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>• Sed ullamcorper morbi tincidunt ornare massa.</p>
+      <p>• Semper risus in hendrerit gravida rutrum quisque.</p>
+      <p>Want to know more about building a stronger password? <a href="#more-info" id="hyper-link">Click here!</a></p>
+      
+      <div class="what-next" id="what-next">
+        <a href="#landing" id="btn">Test another password</a>
+        <!-- TODO: MAYBE "BUILD ME A PASSWORD" -->
+      </div>
+    </div>
+    <div class="build-pw">
+      <section>
+        
+      </section>
+    </div>
+
+    <div class=""
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_background = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountains_front = document.getElementById('mountains_front');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function() {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+:root {
+  --color1: #2b1055;
+  --color2: #7597de;
+  --white: #fff;
+  --block: #1c0522;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(var(--color1), var(--color2));
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--block), transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img #moon {
+  mix-blend-mode: screen;
+}
+
+section img #mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  color: var(--white);
+  white-space: nowrap;
+  font-size: 5.5vw;
+  z-index: 9;
+}
+
+#btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: var(--white);
+  color: var(--color1);
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.test-result {
+  position: relative;
+  padding: 100px;
+  background: var(--block);
+}
+
+.test-result h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.test-result p {
+  font-size: 1.2em;
+  color: var(--white);
+}
+
+.what-next {
+  position: relative;
+  padding: 100px;
+  background: var(--text);
+  align-items: center;
+}
